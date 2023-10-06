@@ -1,4 +1,4 @@
-function ExpenseDetails(data) {
+const ExpenseDetails = (data) =>{
   data = data.expense;
   return (
       <div className="expense-item__description">
