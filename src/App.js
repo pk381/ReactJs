@@ -5,24 +5,27 @@ function App() {
     {
       title: "Food",
       amount: 10,
-      location: 'a'
+      location: 'a',
+      date: new Date()
     },
     {
       title: "Petrol",
       amount: 100,
-      location: 'c'
+      location: 'c',
+      date: new Date()
     },
     {
       title: "Movies",
       amount: 200,
-      location: 'b'
+      location: 'b',
+      date: new Date()
     }
   ];
 
   return (
     <div className="App">
       <h1>Welcome to The React</h1>
-      {expenses.map((item, index)=>(<ExpenseItem title={expenses[index].title} price={expenses[index].amount} location={expenses[index].location}></ExpenseItem>))}
+      {expenses.map((item, index)=>(<ExpenseItem expense={expenses[index]} />))}
       
     </div>
   );

@@ -1,14 +1,14 @@
 import "./ExpenseItem.css";
 
-function ExpenseItem(data) {
+import ExpenseDate from "./ExpenseDate";
+import ExpenseDetails from "./ExpenseDetails";
 
+function ExpenseItem(data) {
+  data = data.expense;
   return (
     <div className="expense-item">
-      <div className="expense-item__description">
-        <h2>{data.title}</h2>
-        <p className="expense-item__price">${data.price}</p>
-        <p className="expense-item__price">Location: {data.location}</p>
-      </div>
+      <ExpenseDate date={data.date}/>
+      <ExpenseDetails expense={data}/>
     </div>
   );
 }
